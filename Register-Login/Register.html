@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/Assets/Register.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-section">
+        <div class="form-content">
+          <img src="/Assets/Vijay Mobiles Logo.png" alt="Logo" class="logo" />
+          <h2>Create account</h2>
+
+          <form id="registerForm" action="/register" method="POST" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="customer_name" placeholder="Your Name" required />
+
+            <label for="mobile">Mobile No.</label>
+            <input type="text" id="mobile" name="customer_contact" placeholder="9325678367" required />
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="customer_email" placeholder="hello@gmail.com" required />
+
+            <label for="address">Address</label>
+            <textarea id="address" name="customer_address" placeholder="Enter your full address" required></textarea>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="customer_password" placeholder="********" required />
+
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" id="confirm-password" name="confirm_password" placeholder="********" required />
+
+            <button type="submit" class="btn-primary">Create my account</button>
+          </form>
+
+          <p class="signin-link">
+            Already have an account?
+            <a href="/Register-Login/Login.html">Sign in</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="graphics-section">
+        <div class="graphic-content"></div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("registerForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const mobile = document.getElementById("mobile").value;
+        const email = document.getElementById("email").value;
+        const address = document.getElementById("address").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+
+        if (name.trim() === "" || !/^[A-Za-z\s]+$/.test(name)) {
+          Swal.fire("Error", "Please enter a valid name without numbers.", "error");
+          return;
+        }
+
+        if (!/^[6789][0-9]{9}$/.test(mobile)) {
+          Swal.fire("Error", "Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.", "error");
+          return;
+        }
+
+        if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+          Swal.fire("Error", "Please enter a valid email address.", "error");
+          return;
+        }
+
+        if (address.length < 10) {
+          Swal.fire("Error", "Address must be at least 10 characters long.", "error");
+          return;
+        }
+
+        if (password.length < 4) {
+          Swal.fire("Error", "Password must be at least 4 characters long.", "error");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          Swal.fire("Error", "Passwords do not match.", "error");
+          return;
+        }
+
+        const formData = new FormData(this);
+        const formObject = {};
+        formData.forEach((value, key) => {
+          formObject[key] = value;
+        });
+
+        fetch("/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formObject),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              Swal.fire("Success", data.message, "success").then(() => {
+                window.location.href = "/Register-Login/Login.html";
+              });
+            } else {
+              Swal.fire("Error", data.message, "error");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            Swal.fire("Error", "An error occurred during registration.", "error");
+          });
+      });
+    </script>
+  </body>
+</html>

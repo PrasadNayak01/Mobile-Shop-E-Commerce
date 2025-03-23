@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Add Product</title>
+    <!-- <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #007bff;
+            padding: 15px 20px;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header div {
+            display: flex;
+            gap: 20px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #ffdd57;
+        }
+
+        .signout-btn {
+            background: #ff4d4d;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .signout-btn:hover {
+            background: #cc0000;
+        }
+
+        main {
+            margin-top: 10px;
+        }
+
+        form {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 8px;
+            width: 100%;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .product-item {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 6px;
+
+        }
+
+        .product-name {
+            flex: 3
+        }
+
+        .product-price {
+            flex: 2
+        }
+
+        .delete-button {
+            flex: 1;
+            border: none;
+            color: white;
+            padding: 6px 5px;
+            background-color: red;
+
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+            .product-item {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+
+            .delete-button {
+                width: auto;
+            }
+        }
+    </style> -->
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        padding: 15px 20px;
+        color: white;
+        font-size: 18px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        flex-wrap: wrap;
+      }
+
+      header div {
+        display: flex;
+        gap: 20px;
+      }
+
+      header a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      header a:hover {
+        color: #ffdd57;
+        transform: scale(1.1);
+      }
+
+      /* Logout Button */
+      .signout-btn {
+        background: #ff4d4d;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      .signout-btn:hover {
+        background: #cc0000;
+        transform: translateY(-2px);
+      }
+
+      main {
+        width: 60%;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      textarea {
+        resize: none;
+        height: 80px;
+      }
+
+      .button {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+
+      .button:hover {
+        background: #218838;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+      .container .product-card {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        text-align: center;
+      }
+
+      .container .product-card img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .container .product-card h3 {
+        color: #333;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      .container .product-card p {
+        color: #666;
+        font-size: 14px;
+      }
+
+      @media (max-width: 1024px) {
+        main {
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        main {
+          width: 90%;
+        }
+        header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        header div a {
+          display: block;
+          margin: 5px 0;
+        }
+        .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .container .product-card {
+          width: 90%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        main {
+          width: 95%;
+          padding: 15px;
+        }
+        input,
+        textarea {
+          font-size: 14px;
+        }
+        .button {
+          font-size: 16px;
+          padding: 8px;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px 0;
+      }
+
+      .product-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 600px;
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-left: 5px solid #007bff;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .product-item:hover {
+        transform: scale(1.02);
+      }
+
+      .product-name {
+        flex: 3;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .product-price {
+        flex: 2;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .delete-button {
+        flex: 1;
+        background: red;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .delete-button:hover {
+        background: darkred;
+      }
+
+      /* Responsive Styling */
+      @media (max-width: 768px) {
+        .product-item {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+
+        .delete-button {
+          width: auto;
+          font-size: 12px;
+        }
+
+        .product-name,
+        .product-price {
+          flex: 100%;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <a href="/Admin">Home</a>
+        <a href="/Adminorders">Orders</a>
+        <a href="/customers">Customers</a>
+      </div>
+      <button class="signout-btn">Sign Out</button>
+    </header>
+    <main>
+      <h2 style="text-align: center">Add Product</h2>
+      <form
+        id="productForm"
+        action="/add-product"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label>Product ID:</label>
+        <input type="text" name="id" required/>
+
+        <label>Upload Image:</label>
+        <input type="file" name="image" accept="image/*"  required/>
+
+        <label>Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Rating (Stars):</label>
+        <input type="number" name="stars" min="1" max="5" step="0.5" required />
+
+        <label>Rating (Count):</label>
+        <input type="number" name="counts"  required/>
+
+        <label>Price:</label>
+        <input type="number" name="price"  required/>
+
+        <label>Camera:</label>
+        <input type="text" name="camera"  required/>
+
+        <label>Battery:</label>
+        <input type="text" name="battery"  required/>
+
+        <label>Description:</label>
+        <textarea name="description"  required></textarea>
+
+        <label>Operating System:</label>
+        <input type="text" name="os"  required/>
+
+        <label>Screen Size:</label>
+        <input type="text" name="screen_size"  required/>
+
+        <label>Memory:</label>
+        <input type="text" name="memory"  required/>
+
+        <label>Brand:</label>
+        <input type="text" name="brand"  required/>
+
+        <label>Keywords (comma-separated):</label>
+        <input type="text" name="Keywords" id="Keyword"  required/>
+
+        <button type="submit" class="button">Add Product</button>
+      </form>
+
+      <h2>Product List</h2>
+      <div class="container" id="product-list"></div>
+    </main>
+
+    <script>
+      document
+        .querySelector(".signout-btn")
+        .addEventListener("click", async () => {
+          try {
+            const response = await fetch("/logout", {
+              method: "POST",
+              credentials: "include", // Ensure cookies are sent
+              headers: { "Content-Type": "application/json" },
+            });
+
+            if (response.ok) {
+              window.location.href = "/Register-Login/Login.html"; // Redirect after logout
+            } else {
+              const data = await response.json();
+              alert(data.message || "Logout failed");
+            }
+          } catch (error) {
+            console.error("Logout error:", error);
+          }
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        loadProducts(); // Load products on page load
+
+        const productForm = document.getElementById("productForm");
+
+        productForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get form values manually
+          const formData = new FormData();
+          const formElements = productForm.elements;
+
+          for (let i = 0; i < formElements.length; i++) {
+            if (formElements[i].name && formElements[i].type !== "file") {
+              formData.append(formElements[i].name, formElements[i].value);
+            }
+          }
+
+          // Handle file upload separately
+          const fileInput = document.querySelector("input[type='file']");
+          if (fileInput.files.length > 0) {
+            formData.append("image", fileInput.files[0]);
+          }
+
+          // Convert "Keyword" to an array
+          const keywordsInput = document.getElementById("Keyword").value;
+          const keywordsArray = keywordsInput.split(",").map((k) => k.trim());
+          formData.delete("Keyword"); // Remove old value
+          keywordsArray.forEach((k) => formData.append("Keyword", k)); // Append array correctly
+
+          // Send request
+          //   fetch("/add-product", {
+          //     method: "POST",
+          //     body: formData,
+          //   })
+          //     .then((response) => response.json())
+          //     .then((result) => alert(result.message))
+          //     .catch((error) => console.error("Error:", error));
+          fetch("/add-product", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((result) => {
+              if (result.success) {
+                Swal.fire({
+                  icon: "success",
+                  title: "Product Added",
+                  text: "Your product has been successfully added!",
+                }).then(() => {
+                  loadProducts(); // ✅ Refresh product list after closing the alert
+                });
+
+                // Clear the form after adding
+                productForm.reset();
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Error",
+                  text: result.message || "Failed to add product. Try again!",
+                });
+              }
+            })
+            .catch((error) => {
+              Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "Something went wrong!",
+              });
+              console.error("Error:", error);
+            });
+        });
+      });
+
+      async function loadProducts() {
+        const response = await fetch("/products");
+        if (response.ok) {
+          const products = await response.json();
+          renderProducts(products);
+        } else {
+          console.error("Failed to load products");
+        }
+      }
+
+      function renderProducts(products) {
+        const productList = document.getElementById("product-list");
+        productList.innerHTML = ""; // Clear current list
+
+        products.forEach((product) => {
+          const productDiv = document.createElement("div");
+          productDiv.classList.add("product-item");
+          productDiv.innerHTML = `
+            <span class="product-name">${product.name}</span>
+            <span class="product-price">Price:₹${product.price}</span>
+            <button class="delete-button" onclick="deleteProduct('${product.id}')">Delete</button>
+        `;
+          productList.appendChild(productDiv);
+        });
+      }
+
+      // Delete a product
+      // Delete product when the button is clicked
+      // async function deleteProduct(id) {
+      //   console.log("Deleting product with ID:", id); // Debugging
+      //   const response = await fetch(`/delete/${id}`, { method: "DELETE" });
+
+      //   if (response.ok) {
+      //     loadProducts(); // Reload the products after deletion
+      //   } else {
+      //     console.error("Failed to delete product");
+      //   }
+      // }
+
+      // Delete a product with confirmation
+      async function deleteProduct(id) {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#d33",
+          cancelButtonColor: "#3085d6",
+          confirmButtonText: "Yes, delete it!",
+        }).then(async (result) => {
+          if (result.isConfirmed) {
+            const response = await fetch(`/delete/${id}`, { method: "DELETE" });
+
+            if (response.ok) {
+              Swal.fire("Deleted!", "The product has been deleted.", "success");
+              loadProducts(); // Reload products
+            } else {
+              Swal.fire("Error!", "Failed to delete the product.", "error");
+            }
+          }
+        });
+      }
+    </script>
+      </body>
+</html>

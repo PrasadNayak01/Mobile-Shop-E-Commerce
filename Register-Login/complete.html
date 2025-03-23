@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Successful</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://unpkg.com/easyinvoice/dist/easyinvoice.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.16.0/pdf-lib.min.js"></script>
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+
+    <script type="module">
+      import { orders, addOrder } from "../Data/ordersData.js";
+      import { cart, saveToStorage } from "../javaScript/cart.js";
+      // import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+      import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+      import { getProduct, loadProducts } from "../Data/productData.js";
+      import { getDeliveryOption } from "../Data/deliveryOption.js";
+      
+      // import { payment } from "./paymentdata.js"
+      // console.log(`payments`, payment);
+      
+      
+      console.log("Script Loaded"); // Verify script is running
+
+      // javaScript/utils/authHelpers.js
+      import jwt_decode from "https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.esm.js";
+
+      export async function getCustomerEmail() {
+        try {
+          const response = await fetch("/me", { credentials: "include" });
+          if (!response.ok) {
+            console.error("Not authenticated");
+            return null;
+          }
+          const data = await response.json();
+          return data.user ? data.user.email : null;
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+          return null;
+        }
+      }
+
+      
+
+      
+
+      // Show SweetAlert2 popup
+      Swal.fire({
+        title: "Payment Successfully",
+        text: "Thank you. Your invoice is ready to download.",
+        icon: "success",
+        confirmButtonText: "Download Invoice",
+        allowOutsideClick: false,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          generateInvoice();
+          setTimeout(() => {
+            window.location.href = "Orders.html";
+          }, 5000);
+        }
+      });
+
+      async function generateInvoice() {
+        await loadProducts();
+        try {
+          const { PDFDocument, rgb } = PDFLib;
+          const pdfDoc = await PDFDocument.create();
+          const page = pdfDoc.addPage([600, 750]);
+          const { width, height } = page.getSize();
+
+          const black = rgb(0, 0, 0);
+          const blue = rgb(0, 0, 1);
+          const gray = rgb(0.5, 0.5, 0.5);
+
+          // Load order details
+          const order = await makeOrder(); // Fetch order details dynamically
+          const orderProducts = order.orderProducts; // Extract order items
+          const orderPrice = order.orderPrice;
+          const customerEmail = order.customerEmail;
+          // console.log(order);
+      
+
+          // Attempt to Load and Embed Logo
+          const imageUrl = "https://i.ibb.co/bjqbzj1f/Vijay-Mobiles-Logo.png";
+          let imageBytes;
+          try {
+            const response = await fetch(imageUrl);
+            imageBytes = await response.arrayBuffer();
+          } catch (error) {
+            console.error("Failed to fetch image:", error);
+            imageBytes = null;
+          }
+
+          if (imageBytes) {
+            const image = await pdfDoc.embedPng(imageBytes);
+            const imgWidth = 170;
+            const imgHeight = (image.height / image.width) * imgWidth;
+            const imgX = (width - imgWidth) / 2;
+            page.drawImage(image, {
+              x: imgX,
+              y: height - 80,
+              width: imgWidth,
+              height: imgHeight,
+            });
+          }
+
+          // Invoice Title
+          page.drawText("Invoice", {
+            x: 50,
+            y: height - 130,
+            size: 24,
+            color: black,
+          });
+
+          // Shop Details (Right Aligned)
+          const rightAlignX = width - 225;
+          page.drawText("Vijay Mobiles", {
+            x: rightAlignX,
+            y: height - 130,
+            size: 20,
+            color: blue,
+          });
+          page.drawText("Shop Number 4, Gupta Chawl", {
+            x: rightAlignX,
+            y: height - 150,
+            size: 12,
+            color: gray,
+          });
+          page.drawText("Near Canara Bank, Kolsewadi,", {
+            x: rightAlignX,
+            y: height - 165,
+            size: 12,
+            color: gray,
+          });
+          page.drawText("Kalyan East, Maharashtra 421306", {
+            x: rightAlignX,
+            y: height - 180,
+            size: 12,
+            color: gray,
+          });
+          page.drawText("Email: support@vijaymobile.com", {
+            x: rightAlignX,
+            y: height - 195,
+            size: 12,
+            color: gray,
+          });
+
+          // Customer Details
+          page.drawText("Bill To:", {
+            x: 50,
+            y: height - 220,
+            size: 14,
+            color: black,
+          });
+          // page.drawText("Om", {
+          //   x: 50,
+          //   y: height - 240,
+          //   size: 12,
+          //   color: black,
+          // });
+          page.drawText(customerEmail, {
+            x: 50,
+            y: height - 255,
+            size: 12,
+            color: gray,
+          });
+          // page.drawText("9632145870", {
+          //   x: 50,
+          //   y: height - 270,
+          //   size: 12,
+          //   color: gray,
+          // });
+          page.drawText(
+            "-----------------------------------------------------------------------------------------------------------",
+            { x: 50, y: height - 285, size: 14, color: gray }
+          );
+
+          // Table Header
+          const tableYStart = height - 300;
+          const colX = { desc: 50, qty: 280, price: 360, total: 470 };
+
+          page.drawText("Description", {
+            x: colX.desc,
+            y: tableYStart,
+            size: 14,
+            color: black,
+          });
+          page.drawText("Qty", {
+            x: colX.qty,
+            y: tableYStart,
+            size: 14,
+            color: black,
+          });
+          page.drawText("Unit Price", {
+            x: colX.price,
+            y: tableYStart,
+            size: 14,
+            color: black,
+          });
+          page.drawText("Total", {
+            x: colX.total,
+            y: tableYStart,
+            size: 14,
+            color: black,
+          });
+
+          page.drawText(
+            "-----------------------------------------------------------------------------------------------------------",
+            { x: colX.desc, y: tableYStart - 10, size: 14, color: gray }
+          );
+
+          let itemY = tableYStart - 30;
+          let subtotal = 0;
+          let totalDeliverycharges = 0;
+          orderProducts.forEach((item) => {
+            // console.log(item);
+            let matchingProduct = getProduct(item.id);
+            // console.log(matchingProduct);
+
+            let deliveryOption = getDeliveryOption(item.deliveryOptionId);
+            // console.log(deliveryOption);
+
+            totalDeliverycharges += deliveryOption.price;
+
+            page.drawText(`${matchingProduct.name}`, {
+              x: colX.desc,
+              y: itemY,
+              size: 12,
+              color: black,
+            });
+            page.drawText(item.quantity.toString(), {
+              x: colX.qty,
+              y: itemY,
+              size: 12,
+              color: black,
+            });
+            page.drawText(`Rs. ${matchingProduct.price}`, {
+              x: colX.price,
+              y: itemY,
+              size: 12,
+              color: black,
+            });
+            page.drawText(`Rs. ${item.quantity * matchingProduct.price}`, {
+              x: colX.total,
+              y: itemY,
+              size: 12,
+              color: black,
+            });
+
+            itemY -= 30;
+          });
+
+          // Total Section
+          page.drawText(
+            "-----------------------------------------------------------------------------------------------------------",
+            { x: 50, y: itemY - 10, size: 14, color: gray }
+          );
+          // page.drawText("Subtotal:", {
+          //   x: ,
+          //   y: itemY - 20,
+          //   size: 12,
+          //   color: black,
+          // });
+          // page.drawText("$1,849", {
+          //   x: colX.total,
+          //   y: itemY - 20,
+          //   size: 12,
+          //   color: black,
+          // });
+
+          page.drawText("Delivery Charges:", {
+            x: colX.price,
+            y: itemY - 40,
+            size: 12,
+            color: black,
+          });
+          page.drawText(`Rs. ${totalDeliverycharges}`, {
+            x: colX.total,
+            y: itemY - 40,
+            size: 12,
+            color: black,
+          });
+
+          page.drawText("Total:", {
+            x: colX.price,
+            y: itemY - 70,
+            size: 14,
+            color: black,
+          });
+          page.drawText(`Rs. ${orderPrice + totalDeliverycharges}`, {
+            x: colX.total,
+            y: itemY - 70,
+            size: 14,
+            color: blue,
+          });
+
+          // Thank You Note
+          page.drawText("Thank you for your purchase!", {
+            x: 200,
+            y: itemY - 110,
+            size: 14,
+            color: blue,
+          });
+
+          // Save and Download PDF
+          const pdfBytes = await pdfDoc.save();
+          const blob = new Blob([pdfBytes], { type: "application/pdf" });
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = "Invoice_VijayMobiles.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } catch (error) {
+          console.error("Error generating invoice:", error);
+          Swal.fire("Error", "Failed to generate invoice.", "error");
+        }
+      }
+
+      // function downloadInvoice() {
+      //   console.log("downloadInvoice() function called");
+
+      //   var data = getSampleData();
+      //   console.log("Invoice Data:", data);
+
+      //   if (typeof easyinvoice !== "undefined") {
+      //     easyinvoice.createInvoice(data, function (result) {
+      //       console.log("Invoice Generation Result:", result);
+
+      //       if (result && result.pdf) {
+      //         var blob = new Blob(
+      //           [new Uint8Array(atob(result.pdf).split("").map((char) => char.charCodeAt(0)))],
+      //           { type: "application/pdf" }
+      //         );
+
+      //         var link = document.createElement("a");
+      //         link.href = URL.createObjectURL(blob);
+      //         link.download = "myInvoice.pdf";
+      //         document.body.appendChild(link);
+      //         link.click();
+      //         document.body.removeChild(link);
+      //       } else {
+      //         console.error("Invoice creation failed or returned empty result.");
+      //       }
+      //     });
+      //   } else {
+      //     console.error("EasyInvoice library is not loaded.");
+      //   }
+      // }
+
+      // function getSampleData() {
+      //   return {
+      //     mode: "development",
+      //     images: {
+      //       logo: "https://public.easyinvoice.cloud/img/logo_en_original.png",
+      //     },
+      //     sender: {
+      //       company: "Vijay Mobiles",
+      //       address: "Shop Number 4 Gupta Chawl Near Canara Bank, opposite Ganpati Temple, Kolsewadi",
+      //       city: "Kalyan (East)",
+      //       country: "India",
+      //     },
+      //     client: {
+      //       name: "Om Khanvilkar",
+      //       address: "New Kalwa School",
+      //       city: "Thane",
+      //       country: "India",
+      //     },
+      //     information: {
+      //       number: "2021.0001",
+      //       date: "12-12-2021",
+      //       "due-date": "31-12-2021",
+      //     },
+      //     products: [
+      //       {
+      //         quantity: 1,
+      //         description: "Product 1",
+      //         "tax-rate": 6,
+      //         price: 100,
+      //       },
+      //     ],
+      //     settings: {
+      //       currency: "INR",
+      //     },
+      //   };
+      // }
+
+      async function makeOrder() {
+        await loadProducts();
+
+        let totalProducts = 0;
+        let totalProductPrice = 0;
+        let deliveryCharges = 0;
+        let totalPrice = 0;
+
+        cart.forEach((cartItem) => {
+          totalProducts += cartItem.quantity;
+
+          let product = getProduct(cartItem.id);
+          // console.log("Product:", product); // Debugging
+          totalProductPrice += product.price * cartItem.quantity;
+
+          let deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
+          deliveryCharges += deliveryOption.price;
+
+          totalPrice = totalProductPrice + deliveryCharges;
+        });
+
+        const orderProducts = cart.map((item) => {
+          return item;
+          // console.log("Item:", item);
+        });
+
+        const customerEmail = await getCustomerEmail();
+
+        return {
+          orderId: uuidv4(),
+          orderTime: dayjs().toISOString(),
+          orderPrice: totalPrice,
+          orderProducts: orderProducts,
+          customerEmail: customerEmail, // Attach the customer's email to the order
+        };
+      }
+
+      document
+        .querySelector(".swal2-confirm")
+        .addEventListener("click", async () => {
+          const order = await makeOrder();
+          addOrder(order);
+          // console.log(order);
+        });
+    </script>
+  </body>
+</html>
+<!-- 4242 4242 4242 4242 -->

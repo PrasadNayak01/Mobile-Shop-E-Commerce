@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/Assets/Login.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Include SweetAlert2 -->
+</head>
+<body>
+    <div class="container">
+        <!-- Left login section -->
+        <div class="login-section">
+            <div class="login-content">
+                <div class="logo">
+                    <img src="/Assets/Vijay Mobiles Logo.png" alt="Vijay Mobiles">
+                </div>
+                <h2>Log in</h2>
+                <p>Welcome to Vijay Mobiles, please put your login credentials below</p>
+                <form id="loginForm" class="login-form" action="/login" method="POST" novalidate>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="customer_email" placeholder="hello@gmail.com" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="customer_password" placeholder="********" required>
+
+                    <button type="submit" class="btn-primary">Log in</button>
+
+                    <p class="register-link">Don't have an account? <a href="/Register-Login/Register.html">Sign up</a></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="graphics-section"></div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Form Validation
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+
+            // Validate email
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                Swal.fire('Error', 'Please enter a valid email address.', 'error');
+                return;
+            }
+
+            // Validate password (check if it's at least 6 characters long)
+            if (password.length < 4) {
+                Swal.fire('Error', 'Password must be at least 4 characters long.', 'error');
+                return;
+            }
+
+
+            // Send login request to server
+            fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({
+                    customer_email: email,
+                    customer_password: password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire('Success', data.message, 'success').then(() => {
+                        window.location.href = data.redirect; // Redirect to the homepage or target page
+                    });
+                } else {
+                    Swal.fire('Error', data.message, 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                Swal.fire('Error', 'An error occurred during authentication.', 'error');
+            });
+        });
+    </script>
+</body>
+</html>

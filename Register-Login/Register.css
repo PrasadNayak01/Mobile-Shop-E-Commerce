@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f3f7;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Left form section */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.form-content {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content img{
+    width: 250px;
+}
+
+.form-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.form-content label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f3bce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #4a148c;
+}
+
+.signin-link {
+    color: #555;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signin-link a {
+    color: #6a1b9a;
+    text-decoration: none;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+
+.graphics-section {
+    flex: 1;
+    background: linear-gradient(45deg, #6246ea, #320da1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding: 40px;
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .graphics-section {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-content h2 {
+        font-size: 24px;
+    }
+
+    .form-content input {
+        padding: 10px;
+    }
+
+    .btn-primary {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

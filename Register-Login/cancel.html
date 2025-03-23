@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Failed</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <script>
+    Swal.fire({
+      title: 'Payment Failed!',
+      text: 'Unfortunately, your payment did not go through. Please try again.',
+      icon: 'error',
+      confirmButtonText: 'OK'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = '/Homepage.html'; // Redirect to homepage or another page
+      }
+    });
+  </script>
+</body>
+</html>

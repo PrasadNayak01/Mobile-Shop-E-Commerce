@@ -1,0 +1,236 @@
+body{
+  font-family: arial;
+  margin:0px;
+  margin-top: 61px; 
+  background-color: rgba(236, 235, 235, 0.851);
+}
+
+@media (max-width: 600px) {
+  body{
+    margin-top: 121px;
+  }
+}
+
+.interface{
+  display: grid;  
+}
+
+.products-grid {
+  display: grid;
+  /* - In CSS Grid, 1fr means a column will take up the
+       remaining space in the grid.
+     - If we write 1fr 1fr ... 1fr; 8 times, this will
+       divide the grid into 8 columns, each taking up an
+       equal amount of the space.
+     - repeat(8, 1fr); is a shortcut for repeating "1fr"
+       8 times (instead of typing out "1fr" 8 times).
+       repeat(...) is a special property that works with
+       display: grid; */
+  grid-template-columns: repeat(8, 1fr);
+  width: 85%;
+  height: 100vh;    
+  margin-left:15%;
+}
+
+/* @media is used to create responsive design (making the
+   website look good on any screen size). This @media
+   means when the screen width is 2000px or less, we
+   will divide the grid into 7 columns instead of 8. */
+@media (max-width: 2000px) {
+  .products-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* This @media means when the screen width is 1600px or
+   less, we will divide the grid into 6 columns. */
+@media (max-width: 1550px) {
+  .products-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* @media (max-width: 1300px) {
+  .products-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+} */
+
+@media (max-width: 1100px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.product-container{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 35px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+
+}
+.product-container:hover{
+  background-color: rgb(220, 240, 255);
+}
+.product-image-container {
+display: flex;
+height: 150px;    
+align-items: center;
+justify-content: center;
+margin-bottom: 5px; 
+background-color: transparent; /* Make sure the container background is transparent */
+}
+
+
+.product-image {
+max-width: 100%;
+max-height: 100%;
+object-fit: contain; 
+background-color: transparent; /* Ensure the image background is transparent */
+border: none; /* Removes any unwanted borders around the image */
+}
+.product-name{
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show a maximum of 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 3em; /* Adjust based on your design */
+  line-height: 1.5em; /* This ensures consistent line spacing */
+  margin-bottom: 3px;
+  transition: 0ms;
+}
+.product-name:hover{
+  color:#200464;
+  text-decoration: underline;
+  text-decoration-color: #200464;  /* Sets the underline color */
+  text-decoration-thickness: 1px; /* Sets the underline thickness */
+  cursor: pointer;
+  
+}
+.products-ratings {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: start;
+  margin-bottom: 5px;
+}
+
+.products-ratings-img {
+  width: 60%; /* Adds some space between the image and the text */
+  margin-right: 8px;
+  
+}
+.rating-count{
+  color:blue;
+  padding-top: 4px;
+}
+.product-price{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.product-quantity-container {
+  margin-bottom: 5px;
+  
+}
+.quantity-selector{
+  width: 30%;
+  height: 15px;
+  margin-bottom: 3px;
+  border-radius: 7px;
+  border: 1px solid none;
+}
+.added-msg{
+  text-align: center;   
+  height: 20px;
+  margin-bottom: 3px;
+  opacity: 0;
+  color: rgb(3, 14, 97);
+  font-size: 16px;
+}
+
+.added-msg-visible {
+  opacity: 1;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 50px ;
+  background-color: rgb(0, 153, 255);
+  border: 1px solid rgb(58, 0, 146);
+  color: white;
+  font-weight: bolder;
+  font-size:14px;
+  margin-bottom: 0px;
+  
+}
+.add-to-cart-button:hover{
+  cursor: pointer;
+  background-color:rgb(51, 181, 255) ;
+}
+
+/* Sidebar */
+
+.sideBar{
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 14%;
+  background-color: rgb(200, 230, 255);
+  padding: 5px 10px;
+  position: fixed;
+
+
+  border-right: 1.5px solid white;
+  border-bottom: 1px solid white;
+  margin-top: 0px;
+} 
+
+.sideBar h3{
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  color: rgb(96, 5, 182);
+  text-decoration:underline rgb(156, 8, 230);
+}
+
+.sideBar button{
+  color: white;
+  font-size: bold;
+  background-color: rgb(0, 122, 204);
+  border: solid white 1px;
+  border-radius: 10px;
+  padding: 3px;
+  margin-bottom: 4px;
+  transition: 0.15s; 
+  cursor: pointer;
+}
+.sideBar button:hover{
+  background-color: rgb(47, 167, 247);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.sideBar button:active{
+  background-color: rgb(85, 180, 244);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+} 
+
+

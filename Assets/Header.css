@@ -1,0 +1,170 @@
+.amazon-header {
+  background-color: rgb(0, 122, 204);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white; 
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 100;
+}
+
+.header-left-section {
+  width: 180px;
+}
+@media (max-width: 600px) {
+  .amazon-header  {
+    flex-wrap: wrap;
+    
+    height: 120px;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-left-section {
+    width: unset;
+  }
+}
+
+.header-link {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header-link:hover {
+  border: 1px solid white;
+}
+
+.shop-logo {
+  width: 90px;
+  margin-top: 1px;
+  background-color: white;
+}
+
+
+/* @media (max-width: 575px) {
+  .shop-logo {
+    display: none;
+  }
+} */
+
+.header-middle-section {
+  flex: 1;
+  max-width: 550px;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: flex;
+}
+
+.search-bar {
+  flex: 1;
+  width: 0z;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-button {
+  background-color: rgb(220, 240, 255);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
+}
+
+.search-icon {
+  height: 22px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+@media (max-width: 600px) {
+  .header-right-section{
+    align-items: center;
+    justify-content:space-around;
+    gap: 40px;
+  }
+}
+
+.header-right-section {
+  width: 250px;
+  flex-shrink: 2;
+  display: flex;
+  justify-content:end;
+  
+}
+
+.orders-link {
+  color: white;
+}
+
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 3px;
+}
+
+.cart-icon {
+  width: 50px;
+}
+
+.cart-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-quantity {
+  color: rgb(240, 136, 4);
+  font-size: 16px;
+  font-weight: 700;
+
+  position: absolute;
+  top: 4px;
+  left: 22px;
+  
+  width: 26px;
+  text-align: center;
+}
+
+.logout-btn{
+  background-color:rgb(0, 122, 204);
+  border:none;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}

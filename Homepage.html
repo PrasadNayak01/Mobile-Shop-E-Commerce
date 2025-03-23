@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo for final year project, 1st</title>
+    <link rel="stylesheet" href="Assets/Homepage.css" />
+    <link rel="stylesheet" href="Assets/Header.css" />
+  </head>
+  <body style="padding-bottom: 1000px">
+    <div class="amazon-header">
+      <div class="header-left-section">
+        <a href="Homepage.html" class="header-link">
+          <img class="shop-logo" src="Assets/images/Vijay Mobiles Logo.png" />
+        </a>
+      </div>
+
+      <div class="header-middle-section">
+        <input
+          class="search-bar js-search-bar"
+          type="text"
+          placeholder="Search"
+        />
+
+        <button class="search-button js-search-button">
+          <img class="search-icon" src="images/icons/search-icon.png" />
+        </button>
+      </div>
+
+      <div class="header-right-section">
+        <a class="orders-link header-link" href="orders.html">
+          Order & Returns
+        </a>
+
+        <a class="cart-link header-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png" />
+          <div class="cart-quantity js-cart-quantity"></div>
+          <div class="cart-text">Cart</div>
+        </a>
+
+        <button class="logout-btn header-link">Sign Out</button>
+      </div>
+    </div>
+    <main>
+      <interface class="interface">
+        <!-- <div class="sideBar" id="sidebar"></div> -->
+        <div class="sideBar js-siderbar-filter">
+          <h3>Default</h3>
+          <button class="filter-button" data-filter="Default">Default</button>
+          <h3>Brands</h3>
+          <button class="filter-button" data-filter="Samsung">Samsung</button>
+          <button class="filter-button" data-filter="Apple">Apple</button>
+          <button class="filter-button" data-filter="Oppo">Oppo</button>
+          <button class="filter-button" data-filter="IQOO">IQOO</button>
+          <button class="filter-button" data-filter="Nothing">Nothing</button>
+          <button class="filter-button" data-filter="Realme">Realme</button>
+          <button class="filter-button" data-filter="Redmi">Redmi</button>
+          <button class="filter-button" data-filter="Xiaomi">Xiaomi</button>
+          <h3>Price</h3>
+          <button class="filter-button" data-filter="30000">
+            Below 30,000
+          </button>
+          <button class="filter-button" data-filter="50000">
+            Below 50,000
+          </button>
+          <button class="filter-button" data-filter="100000">
+            Below 1,00,000
+          </button>
+          <button class="filter-button" data-filter="Above 100000">
+            Above 1,00,000
+          </button>
+          <h3>Ratings</h3>
+          <button class="filter-button" data-filter="5">5 Star</button>
+          <button class="filter-button" data-filter="4">4 Star</button>
+          <button class="filter-button" data-filter="3">3 Star</button>
+          <h3>Mobile Network</h3>
+          <button class="filter-button" data-filter="5G">5G</button>
+          <button class="filter-button" data-filter="4G">4G</button>
+        </div>
+        <div class="products-grid"></div>
+      </interface>
+    </main>
+
+    <!-- <script src="javaScript/homeSidebar.js"></script> -->
+    <script type="module" src="javaScript/Homepage.js"></script>
+    <script>
+      document
+        .querySelector(".logout-btn")
+        .addEventListener("click", async () => {
+          try {
+            const response = await fetch("/logout", {
+              method: "POST",
+              credentials: "include", // Ensure cookies are sent
+              headers: { "Content-Type": "application/json" },
+            });
+
+            if (response.ok) {
+              window.location.href = "/Register-Login/Login.html"; // Redirect after logout
+            } else {
+              const data = await response.json();
+              alert(data.message || "Logout failed");
+            }
+          } catch (error) {
+            console.error("Logout error:", error);
+          }
+        });
+    </script>
+  </body>
+</html>

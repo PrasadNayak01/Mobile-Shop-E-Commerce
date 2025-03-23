@@ -1,0 +1,971 @@
+[
+  {
+    "id": "1a",
+    "image": "images/1740035331526-samsungs24.jpg",
+    "name": "Samsung Galaxy S24 Ultra 5G AI",
+    "rating": {
+      "stars": 5,
+      "counts": 4128
+    },
+    "price": 129999,
+    "camera": "200",
+    "battery": "5000",
+    "description": "The Samsung Galaxy S24 Ultra 5G AI combines cutting-edge technology with a sleek design, featuring a 6.8-inch Dynamic AMOLED display for vivid visuals. It boasts a powerful camera system with a 200MP main sensor for exceptional detail and clarity. The device is powered by a large battery, ensuring extended use and supports fast charging. Additionally, it leverages AI enhancements for optimized performance and photography.",
+    "os": "One UI",
+    "screen_size": "6.8",
+    "memory": "512",
+    "brand": "Samsung",
+    "Keyword": [
+      "Samsung",
+      "mobile",
+      "5G"
+    ]
+  },
+  {
+    "id": "2a",
+    "image": "images/1740035547006-Apple iPhone 15 Plus.jpg",
+    "name": "Apple iPhone 15 Plus",
+    "rating": {
+      "stars": 4.5,
+      "counts": 691
+    },
+    "price": 79999,
+    "camera": "48",
+    "battery": "4383",
+    "description": "The iPhone 15 Plus features a 6.7-inch Super Retina XDR display, offering vibrant visuals and enhanced brightness. Powered by the A16 Bionic chip, it ensures smooth performance and energy efficiency. With a dual-camera system, including a 48MP main camera, it captures high-quality photos and videos. The device also supports Dynamic Island and USB-C charging for improved functionality and convenience.",
+    "os": "ios",
+    "screen_size": "6.7",
+    "memory": "128",
+    "brand": "Apple",
+    "Keyword": [
+      "Apple",
+      "mobile",
+      "4G"
+    ]
+  },
+  {
+    "id": "3a",
+    "image": "images/1740035691727-iQOO Neo 9 Pro 5G.jpg",
+    "name": "iQOO Neo 9 Pro 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 73
+    },
+    "price": 32777,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The iQOO Neo 9 Pro 5G offers a high-performance experience with its 6.78-inch AMOLED display, boasting a fast refresh rate for smooth visuals. It is powered by a robust processor and features a versatile triple-camera system with a 50MP main sensor for excellent photography. With a large 5,000 mAh battery, it supports extended use and fast charging capabilities, making it a strong choice for gamers and power users.",
+    "os": "IQOO UI",
+    "screen_size": "6.78",
+    "memory": "256",
+    "brand": "IQOO",
+    "Keyword": [
+      "iqoo",
+      "mobile",
+      "5G"
+    ]
+  },
+  {
+    "id": "4a",
+    "image": "images/1740148283761-Nothing Phone 1 5G.jpg",
+    "name": "Nothing Phone 1 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 51
+    },
+    "price": 32777,
+    "camera": "50",
+    "battery": "4500",
+    "description": "The Nothing Phone 1 5G features a unique transparent design showcasing its internal components and an innovative LED light system for notifications. It comes with a 6.55-inch OLED display, offering vivid colors and smooth performance. The phone is equipped with a dual-camera system, including a 50MP main sensor, and a 4,500 mAh battery that supports fast charging. Its 5G connectivity ensures fast and reliable internet speeds.",
+    "os": "Nothing OS",
+    "screen_size": "6.55",
+    "memory": "128",
+    "brand": "Nothing",
+    "Keyword": [
+      "Nothing",
+      "5G"
+    ]
+  },
+  {
+    "id": "5a",
+    "image": "images/1740148408124-Apple iPhone 15 Pro Max.jpg",
+    "name": "Apple iPhone 15 Pro Max",
+    "rating": {
+      "stars": 4.5,
+      "counts": 339
+    },
+    "price": 144999,
+    "camera": "48",
+    "battery": "4422",
+    "description": "The iPhone 15 Pro Max is Apple's latest flagship, featuring a sleek titanium frame and a powerful A17 Pro chip for enhanced performance. It boasts a 6.7-inch Super Retina XDR display with ProMotion, offering smoother visuals. Its advanced camera system includes a 48MP main sensor with improved low-light capabilities and a 5x optical zoom. The device also introduces USB-C connectivity and enhanced battery life, making it a standout in the premium smartphone market.",
+    "os": "iOS",
+    "screen_size": "6.7",
+    "memory": "512",
+    "brand": "Apple",
+    "Keyword": [
+      "Apple",
+      "4G"
+    ]
+  },
+  {
+    "id": "6a",
+    "image": "images/1740148488500-iQOO Z7 Pro 5G.jpg",
+    "name": "iQOO Z7 Pro 5G",
+    "rating": {
+      "stars": 4.5,
+      "counts": 6658
+    },
+    "price": 20999,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The iQOO Z7 Pro 5G delivers a high-quality experience with its 6.78-inch AMOLED display, providing vibrant colors and smooth performance. It features a 64MP main camera paired with a 2MP depth sensor for detailed and depth-rich photos. The 5,000 mAh battery ensures long-lasting use, and the device supports 5G connectivity for fast and reliable internet speeds.",
+    "os": "iQOO UI",
+    "screen_size": "6.78",
+    "memory": "128",
+    "brand": "IQOO",
+    "Keyword": [
+      "iqoo",
+      "5G"
+    ]
+  },
+  {
+    "id": "7a",
+    "image": "images/1740148637380-OPPO F27 5G.jpg",
+    "name": "OPPO F27 5G",
+    "rating": {
+      "stars": 3.5,
+      "counts": 58
+    },
+    "price": 22999,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The OPPO F27 5G features a 6.74-inch AMOLED display, offering vibrant colors and smooth performance. It comes with a versatile camera setup, including a 64MP main sensor for detailed photography. With a 5,000 mAh battery, it ensures long-lasting use and supports fast charging. The phone also supports 5G connectivity for high-speed internet and a seamless user experience.",
+    "os": "ColorOS",
+    "screen_size": "6.74",
+    "memory": "256",
+    "brand": "Oppo",
+    "Keyword": [
+      "Oppo",
+      "5G"
+    ]
+  },
+  {
+    "id": "8a",
+    "image": "images/1740148734095-Realme 12 Pro 5G.jpg",
+    "name": "Realme 12 Pro 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 374
+    },
+    "price": 26854,
+    "camera": "108",
+    "battery": "5000",
+    "description": "The Realme 12 Pro 5G features a 6.6-inch Super AMOLED display, offering vibrant and fluid visuals. It comes with a versatile quad-camera system, including a 108MP main sensor for high-resolution photography. The phone is equipped with a 5,000 mAh battery for long-lasting use and supports 5G connectivity for fast and reliable internet speeds.",
+    "os": "Realme UI",
+    "screen_size": "6.6",
+    "memory": "256",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "9a",
+    "image": "images/1740148896600-Xiaomi 14 CIVI.jpg",
+    "name": "Xiaomi 14 CIVI",
+    "rating": {
+      "stars": 3.5,
+      "counts": 74
+    },
+    "price": 38449,
+    "camera": "50",
+    "battery": "4500",
+    "description": "The Xiaomi 14 Civi features a 6.55-inch AMOLED display with a high refresh rate, offering vibrant and fluid visuals. It is equipped with a versatile camera system, including a 50MP main sensor for detailed photography. The phone is powered by a 4,500 mAh battery, providing all-day usage, and supports fast charging. Its sleek design and high-performance specifications make it a strong choice for users seeking a stylish and capable smartphone.",
+    "os": "MIUI",
+    "screen_size": "6.55",
+    "memory": "512",
+    "brand": "Xiaomi",
+    "Keyword": [
+      "Xiaomi",
+      "4G"
+    ]
+  },
+  {
+    "id": "10a",
+    "image": "images/1740148975038-Realme 12 ProPlus 5G.jpg",
+    "name": "Realme 12 Pro+ 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 374
+    },
+    "price": 25299,
+    "camera": "108",
+    "battery": "5000",
+    "description": "The Realme 12 Pro+ 5G features a stunning 6.7-inch AMOLED display, providing vibrant colors and smooth visuals. It boasts a 108MP main camera for high-resolution photography and a 5,000 mAh battery for extended use. The phone supports 5G connectivity, ensuring fast and reliable internet speeds for a seamless experience.",
+    "os": "Realme UI",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "11a",
+    "image": "images/1740149086520-Samsung Galaxy A35 5G.jpg",
+    "name": "Samsung Galaxy A35 5G",
+    "rating": {
+      "stars": 3.5,
+      "counts": 99
+    },
+    "price": 30998,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The Samsung Galaxy A35 5G features a 6.5-inch Super AMOLED display for vibrant visuals and smooth performance. It comes equipped with a versatile triple-camera system, including a 50MP main sensor for high-quality photos. Powered by a 5,000 mAh battery, the phone offers long-lasting usage and supports 5G connectivity for fast and reliable internet speeds. Its sleek design and solid performance make it a great mid-range option.",
+    "os": "One UI",
+    "screen_size": "6.5",
+    "memory": "128",
+    "brand": "Samsung",
+    "Keyword": [
+      "Samsung",
+      "5G"
+    ]
+  },
+  {
+    "id": "12a",
+    "image": "images/1740149174423-iQOO Z9 5G.jpg",
+    "name": "iQOO Z9 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 4451
+    },
+    "price": 19998,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The iQOO Z9 5G is designed for high performance with its 6.78-inch AMOLED display, delivering vibrant and fluid visuals. It sports a versatile camera system featuring a 64MP main sensor for detailed photography. With a robust 5,000 mAh battery, it offers extended usage and fast charging. The phone supports 5G connectivity for swift and reliable internet speeds.",
+    "os": "iQOO UI",
+    "screen_size": "6.38",
+    "memory": "128",
+    "brand": "IQOO",
+    "Keyword": [
+      "iqoo",
+      "5G"
+    ]
+  },
+  {
+    "id": "13a",
+    "image": "images/1740149246749-OPPO F27 ProPlus 5G.jpg",
+    "name": "OPPO F27 Pro+ 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 233
+    },
+    "price": 29999,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The OPPO F27 Pro+ 5G boasts a 6.74-inch AMOLED display, offering bright and immersive visuals. It features a powerful 64MP main camera for high-resolution photos and a 5,000 mAh battery for extended usage. The device supports 5G connectivity, ensuring fast and reliable internet speeds, and is designed to deliver a smooth and responsive user experience.",
+    "os": "ColorOS",
+    "screen_size": "6.74",
+    "memory": "256",
+    "brand": "Oppo",
+    "Keyword": [
+      "Oppo",
+      "5G"
+    ]
+  },
+  {
+    "id": "14a",
+    "image": "images/1740149342582-Realme 12Plus 5G.jpg",
+    "name": "Realme 12+ 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 430
+    },
+    "price": 18889,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The Realme 12+ 5G offers a dynamic experience with its 6.6-inch Full HD+ display, providing clear and vibrant visuals. It features a versatile camera system with a 50MP main sensor for detailed photography. The device is powered by a robust 5,000 mAh battery for all-day usage and supports 5G connectivity for fast internet speeds.",
+    "os": "Realme UI",
+    "screen_size": "6.6",
+    "memory": "256",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "15a",
+    "image": "images/1740152155493-SAMSUNG GALAXY S23 FE 5G.jpg",
+    "name": "Samsung Galaxy S23 FE 5G",
+    "rating": {
+      "stars": 3.5,
+      "counts": 610
+    },
+    "price": 34500,
+    "camera": "50",
+    "battery": "4500",
+    "description": "The Samsung Galaxy S23 FE 5G features a 6.4-inch Dynamic AMOLED display with vibrant colours and smooth performance. It is powered by an Exynos 2200 or Snapdragon 8 Gen 1 chipset, depending on the region, for high-end performance. The phone sports a triple-camera system with a 50MP main sensor, delivering excellent photo quality. With a 4,500 mAh battery, it supports fast charging and offers reliable 5G connectivity.",
+    "os": "One UI",
+    "screen_size": "6.4",
+    "memory": "256",
+    "brand": "Samsung",
+    "Keyword": [
+      "Samsung",
+      "5G"
+    ]
+  },
+  {
+    "id": "16a",
+    "image": "images/1740156065805-Xiaomi 14 Ultra.jpg",
+    "name": "Xiaomi 14 Ultra",
+    "rating": {
+      "stars": 5,
+      "counts": 1896
+    },
+    "price": 99999,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The Xiaomi 14 Ultra boasts a stunning 6.73-inch AMOLED display with WQHD+ resolution for exceptional clarity and color accuracy. It features a powerful camera system with a 50MP main sensor, offering top-notch photography and videography. The device is equipped with a robust 5,000 mAh battery for extended use and supports fast charging. With its advanced performance and premium build, the Xiaomi 14 Ultra is designed for high-end users seeking a top-tier smartphone experience.",
+    "os": "MIUI",
+    "screen_size": "6.73",
+    "memory": "512",
+    "brand": "Xiaomi",
+    "Keyword": [
+      "Xiaomi",
+      "4G"
+    ]
+  },
+  {
+    "id": "17a",
+    "image": "images/1740156149401-Redmi Note 13 5G.jpg",
+    "name": "Redmi Note 13 5G",
+    "rating": {
+      "stars": 3.5,
+      "counts": 881
+    },
+    "price": 16998,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The Redmi Note 13 5G features a 6.67-inch AMOLED display, offering vibrant visuals and smooth performance. It comes with a 50MP main camera for sharp photos and videos. Powered by a large 5,000 mAh battery, the phone supports fast charging for extended use. With 5G connectivity, it ensures fast and reliable network speeds, making it ideal for gaming and multimedia.",
+    "os": "MIUI",
+    "screen_size": "6.67",
+    "memory": "128",
+    "brand": "Redmi",
+    "Keyword": [
+      "Redmi",
+      "5G"
+    ]
+  },
+  {
+    "id": "18a",
+    "image": "images/1740156229138-Realme 13 Pro 5G.jpg",
+    "name": "Realme 13 Pro 5G",
+    "rating": {
+      "stars": 3,
+      "counts": 88
+    },
+    "price": 25999,
+    "camera": "108",
+    "battery": "5000",
+    "description": "The Realme 13 Pro 5G features a 6.7-inch AMOLED display, offering a crisp and vibrant viewing experience. It is equipped with a versatile camera system that includes a 108MP main sensor for high-resolution photos. The device is powered by a 5,000 mAh battery, ensuring long-lasting use and fast charging capabilities. With 5G support, it provides quick and reliable internet connectivity.",
+    "os": "Realme UI",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "19a",
+    "image": "images/1740156344933-OPPO Find N3 Flip.jpg",
+    "name": "OPPO Find N3 Flip",
+    "rating": {
+      "stars": 5,
+      "counts": 1
+    },
+    "price": 64699,
+    "camera": "50",
+    "battery": "4300",
+    "description": "The OPPO Find N3 Flip combines style and innovation with its compact foldable design. It features a 6.8-inch AMOLED main display that unfolds to provide a large, immersive viewing experience. The phone includes a versatile camera system for high-quality photos and videos, and a 4,300 mAh battery ensures reliable performance throughout the day. Its sleek, foldable design makes it a standout choice for those seeking cutting-edge technology in a portable form factor.",
+    "os": "ColorOS",
+    "screen_size": "6.8",
+    "memory": "256",
+    "brand": "Oppo",
+    "Keyword": [
+      "Oppo",
+      "4G"
+    ]
+  },
+  {
+    "id": "20a",
+    "image": "images/1740156513611-Samsung Galaxy S23 Ultra 5G.jpg",
+    "name": "Samsung Galaxy S23 Ultra 5G",
+    "rating": {
+      "stars": 4.5,
+      "counts": 1378
+    },
+    "price": 79999,
+    "camera": "200",
+    "battery": "5000",
+    "description": "The Samsung Galaxy S23 Ultra 5G boasts a stunning 6.8-inch Dynamic AMOLED 2X display, providing vibrant and crisp visuals. It features a versatile quad-camera system, including a 200MP main sensor for exceptional detail and clarity. The phone is powered by a robust battery that supports long usage and fast charging. With 5G connectivity, it ensures fast and reliable internet speeds for a top-notch mobile experience.",
+    "os": "One UI",
+    "screen_size": "6.8",
+    "memory": "256",
+    "brand": "Samsung",
+    "Keyword": [
+      "Samsung",
+      "5G"
+    ]
+  },
+  {
+    "id": "21a",
+    "image": "images/1740156589736-OnePlus 12.jpg",
+    "name": "OnePlus 12",
+    "rating": {
+      "stars": 5,
+      "counts": 716
+    },
+    "price": 69998,
+    "camera": "50",
+    "battery": "5400",
+    "description": "The OnePlus 12 features a sleek design with a 6.7-inch AMOLED display, offering vibrant colors and smooth scrolling. It is powered by the latest Snapdragon chipset, ensuring top-tier performance and efficiency. The camera system includes a versatile triple-lens setup with a 50MP main sensor for high-quality photos. With a robust battery and fast charging capabilities, the OnePlus 12 delivers both longevity and convenience.",
+    "os": "OxygenOS",
+    "screen_size": "6.7",
+    "memory": "512",
+    "brand": "OnePlus",
+    "Keyword": [
+      "OnePlus",
+      "4G"
+    ]
+  },
+  {
+    "id": "23a",
+    "image": "images/1740156720076-iQOO Z9 Lite 5G.jpg",
+    "name": "iQOO Z9 Lite 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 788
+    },
+    "price": 11498,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The iQOO Z9 Lite 5G features a 6.67-inch AMOLED display, offering vibrant colours and smooth visuals. It is equipped with a 64MP main camera for high-quality photos and a 5,000 mAh battery that ensures long-lasting performance. The device supports 5G connectivity, providing fast and reliable internet speeds for a seamless user experience.",
+    "os": "iQOO UI",
+    "screen_size": "6.67",
+    "memory": "128",
+    "brand": "IQOO",
+    "Keyword": [
+      "iqoo",
+      "5G"
+    ]
+  },
+  {
+    "id": "24a",
+    "image": "images/1740156804481-Redmi Note 13 ProPlus World Champions Edition.jpg",
+    "name": "Redmi Note 13 Pro+ World Champions Edition",
+    "rating": {
+      "stars": 4,
+      "counts": 634
+    },
+    "price": 36499,
+    "camera": "200",
+    "battery": "5000",
+    "description": "The Redmi Note 13 Pro+ World Champions Edition celebrates a unique design inspired by world champions, offering a 6.67-inch AMOLED display with vibrant colors and smooth performance. It features a 200MP main camera for exceptional photography and a powerful 5,000 mAh battery with fast charging support. The device combines premium specs with 5G connectivity, delivering both style and performance.",
+    "os": "MIUI",
+    "screen_size": "6.67",
+    "memory": "512",
+    "brand": "Redmi",
+    "Keyword": [
+      "Redmi",
+      "4G"
+    ]
+  },
+  {
+    "id": "25a",
+    "image": "images/1740156924475-Realme 13 ProPlus 5G.jpg",
+    "name": "Realme 13 Pro+ 5G",
+    "rating": {
+      "stars": 4.5,
+      "counts": 8
+    },
+    "price": 29999,
+    "camera": "108",
+    "battery": "5000",
+    "description": "The Realme 13 Pro+ 5G boasts a 6.7-inch AMOLED display, offering vibrant and immersive visuals. It features a versatile camera system with a 108MP main sensor for high-resolution photos. Equipped with a robust 5,000 mAh battery, it supports long-lasting use and fast charging. The device also includes 5G connectivity for swift and reliable internet performance.",
+    "os": "Realme UI",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "26a",
+    "image": "images/1740156999152-Realme GT 6T 5G.jpg",
+    "name": "Realme GT 6T 5G",
+    "rating": {
+      "stars": 4.5,
+      "counts": 1552
+    },
+    "price": 30998,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The Realme GT 6T 5G boasts a 6.7-inch AMOLED display with a high refresh rate for smooth and vibrant visuals. It features a versatile camera system with a 50MP main sensor for detailed photography. The device is powered by a robust 5,000 mAh battery, providing all-day usage, and supports 5G connectivity for fast and efficient internet speeds.",
+    "os": "Realme UI",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "27a",
+    "image": "images/1740157071024-iQOO Z9s Pro 5G.jpg",
+    "name": "iQOO Z9s Pro 5G",
+    "rating": {
+      "stars": 5,
+      "counts": 229
+    },
+    "price": 24998,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The iQOO Z9s Pro 5G stands out with its 6.78-inch AMOLED display, delivering sharp and immersive visuals. It features a 64MP main camera for detailed and vibrant photos. Powered by a 5,000 mAh battery, it offers extended usage and quick recharging. The phone also supports 5G connectivity for fast and reliable internet speeds.",
+    "os": "iQOO UI",
+    "screen_size": "6.78",
+    "memory": "128",
+    "brand": "IQOO",
+    "Keyword": [
+      "iqoo",
+      "5G"
+    ]
+  },
+  {
+    "id": "28a",
+    "image": "images/1740157376914-Realme Narzo 70 5G.jpg",
+    "name": "Realme Narzo 70 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 1222
+    },
+    "price": 16999,
+    "camera": "48",
+    "battery": "5000",
+    "description": "The Realme Narzo 70 5G offers a dynamic 6.5-inch display, providing vibrant visuals and smooth performance. It features a 48MP main camera for high-quality photos and a 5,000 mAh battery for extended usage. With 5G connectivity, it ensures fast and reliable internet speeds for a seamless user experience.",
+    "os": "Realme UI",
+    "screen_size": "6.5",
+    "memory": "128",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "29a",
+    "image": "images/1740157448556-Samsung Galaxy S24 5G AI.jpg",
+    "name": "Samsung Galaxy S24 5G AI",
+    "rating": {
+      "stars": 4,
+      "counts": 301
+    },
+    "price": 58450,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The Samsung Galaxy S24 5G AI combines cutting-edge technology with sleek design, featuring a 6.8-inch Dynamic AMOLED display for vibrant and immersive visuals. It is equipped with a versatile camera system enhanced by AI for improved photo quality and smart features. The device boasts a powerful battery for all-day use and supports 5G connectivity for fast and reliable internet.",
+    "os": "One UI",
+    "screen_size": "6.8",
+    "memory": "256",
+    "brand": "Samsung",
+    "Keyword": [
+      "Samsung",
+      "5G"
+    ]
+  },
+  {
+    "id": "30a",
+    "image": "images/1740157547663-Apple iPhone 15 Pro.jpg",
+    "name": "Apple iPhone 15 Pro",
+    "rating": {
+      "stars": 4.5,
+      "counts": 328
+    },
+    "price": 133600,
+    "camera": "48",
+    "battery": "3650",
+    "description": "The iPhone 15 Pro features a sleek, titanium frame for enhanced durability and a lighter feel. It boasts a powerful A17 Pro chip, advanced camera system with improved low-light performance, and a stunning Super Retina XDR display. Additionally, it supports USB-C connectivity for faster data transfer and charging.",
+    "os": "iOS",
+    "screen_size": "6.1",
+    "memory": "128",
+    "brand": "Apple",
+    "Keyword": [
+      "Apple",
+      "4G"
+    ]
+  },
+  {
+    "id": "31a",
+    "image": "images/1740157646386-OnePlus 12R.jpg",
+    "name": "OnePlus 12R",
+    "rating": {
+      "stars": 4.5,
+      "counts": 3137
+    },
+    "price": 45998,
+    "camera": "50",
+    "battery": "5500",
+    "description": "The OnePlus 12R features a 6.7-inch AMOLED display, offering bright and fluid visuals with a high refresh rate. It boasts a versatile camera system with a 50MP main sensor for high-quality photos and videos. The phone is powered by a robust battery, providing long-lasting use and fast charging capabilities. With its sleek design and top-notch performance, the OnePlus 12R is a strong contender in the flagship segment.",
+    "os": "OxygenOS",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "OnePlus",
+    "Keyword": [
+      "OnePlus",
+      "4G"
+    ]
+  },
+  {
+    "id": "32a",
+    "image": "images/1740157753043-Samsung Galaxy Z Flip6 5G AI.jpg",
+    "name": "Samsung Galaxy Z Flip 6 5G AI",
+    "rating": {
+      "stars": 5,
+      "counts": 53
+    },
+    "price": 109998,
+    "camera": "50",
+    "battery": "3700",
+    "description": "The Samsung Galaxy Z Flip 6 5G combines innovative design with cutting-edge technology, featuring a foldable 6.7-inch Dynamic AMOLED display that unfolds into a compact, pocket-friendly form. It boasts a versatile camera system with advanced AI capabilities for enhanced photography and video. The phone is powered by a robust battery and supports 5G connectivity for high-speed internet. Its foldable design and premium build offer a unique and modern user experience.",
+    "os": "One UI",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Samsung",
+    "Keyword": [
+      "Samsung",
+      "5G"
+    ]
+  },
+  {
+    "id": "33a",
+    "image": "images/1740158623400-Realme Narzo 70 Pro 5G.jpg",
+    "name": "Realme Narzo 70 Pro 5G",
+    "rating": {
+      "stars": 4.5,
+      "counts": 328
+    },
+    "price": 18998,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The Realme Narzo 70 Pro 5G features a 6.7-inch AMOLED display with smooth visuals and vibrant colours. It boasts a powerful 64MP main camera for sharp and detailed photography. Equipped with a 5,000 mAh battery, the device ensures long-lasting usage and supports fast charging. With 5G connectivity, it delivers fast internet speeds and seamless performance for gaming and multitasking.",
+    "os": "Realme UI",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "34a",
+    "image": "images/1740158752997-OnePlus Nord 4.jpg",
+    "name": "OnePlus Nord 4",
+    "rating": {
+      "stars": 4,
+      "counts": 539
+    },
+    "price": 32998,
+    "camera": "50",
+    "battery": "4500",
+    "description": "The OnePlus Nord 4 offers a smooth user experience with its 6.43-inch AMOLED display and a fast refresh rate. It features a versatile camera setup, including a 50MP main sensor for crisp and detailed photos. Powered by a robust processor and a 4,500 mAh battery, it ensures reliable performance and long-lasting use. The phone also supports fast charging and 5G connectivity for quick internet speeds.",
+    "os": "OxygenOS",
+    "screen_size": "6.43",
+    "memory": "256",
+    "brand": "OnePlus",
+    "Keyword": [
+      "OnePlus",
+      "4G"
+    ]
+  },
+  {
+    "id": "35a",
+    "image": "images/1740158838605-OPPO Reno 11 Pro 5G.jpg",
+    "name": "OPPO Reno 11 Pro 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 16
+    },
+    "price": 29999,
+    "camera": "50",
+    "battery": "4500",
+    "description": "The OPPO Reno 11 Pro 5G combines elegance and performance with its 6.7-inch AMOLED display, offering vivid colors and sharp detail. It features a versatile camera setup with a 50MP main sensor for high-quality photos. The device is powered by a 4,500 mAh battery, supporting all-day use and fast charging. With 5G connectivity, it ensures swift and reliable internet speeds.",
+    "os": "ColorOS",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Oppo",
+    "Keyword": [
+      "Oppo",
+      "5G"
+    ]
+  },
+  {
+    "id": "36a",
+    "image": "images/1740158921803-Nothing Phone 2 5G.jpg",
+    "name": "Nothing Phone 2 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 32
+    },
+    "price": 37999,
+    "camera": "50",
+    "battery": "4700",
+    "description": "The Nothing Phone 2 5G features a unique design with its transparent back and LED glyph interface, offering a distinctive look and interactive notifications. It boasts a 6.7-inch AMOLED display for vibrant visuals and is powered by a capable processor for smooth performance. The phone includes a versatile camera system for high-quality photos and a durable battery for extended usage. Additionally, it supports 5G connectivity for fast and reliable internet speeds.",
+    "os": "Nothing OS",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "Nothing",
+    "Keyword": [
+      "Nothing",
+      "5G"
+    ]
+  },
+  {
+    "id": "37a",
+    "image": "images/1740159016584-RedmiNote13ProPlus.jpg",
+    "name": "Redmi Note 13 Pro+",
+    "rating": {
+      "stars": 4,
+      "counts": 635
+    },
+    "price": 29499,
+    "camera": "200",
+    "battery": "5000",
+    "description": "The Redmi Note 13 Pro+ features a stunning 6.67-inch AMOLED display with a 120Hz refresh rate for smooth visuals. It boasts a powerful 200MP main camera for exceptional photo clarity and a 5,000 mAh battery with fast charging capabilities. Powered by a robust processor, it offers strong performance, making it an excellent choice for both photography enthusiasts and power users.",
+    "os": "MIUI",
+    "screen_size": "6.67",
+    "memory": "256",
+    "brand": "Redmi",
+    "Keyword": [
+      "Redmi",
+      "4G"
+    ]
+  },
+  {
+    "id": "38a",
+    "image": "images/1740159119382-OPPO Reno 12 Pro 5G.jpg",
+    "name": "OPPO Reno 12 Pro 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 6
+    },
+    "price": 34300,
+    "camera": "64",
+    "battery": "4500",
+    "description": "The OPPO Reno 12 Pro 5G boasts a sleek design with a 6.5-inch AMOLED display, offering vivid colours and crisp visuals. It features a versatile camera system with a 64MP main sensor for high-quality photography. The 4,500 mAh battery ensures all-day usage, and the device supports 5G connectivity for fast and reliable internet speeds.",
+    "os": "ColorOS",
+    "screen_size": "6.5",
+    "memory": "512",
+    "brand": "Oppo",
+    "Keyword": [
+      "Oppo",
+      "5G"
+    ]
+  },
+  {
+    "id": "39a",
+    "image": "images/1740159211959-Realme Narzo 70x 5G.jpg",
+    "name": "Realme Narzo 70x 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 1743
+    },
+    "price": 14999,
+    "camera": "50",
+    "battery": "5000",
+    "description": "The Realme Narzo 70x 5G offers a 6.72-inch IPS LCD display with smooth visuals and vibrant colors. It features a 50MP dual-camera setup for clear and sharp photos. Powered by a 5,000 mAh battery, the phone provides long-lasting performance with fast charging support. The device is equipped with 5G connectivity, ensuring fast and seamless internet speeds.",
+    "os": "Realme UI",
+    "screen_size": "6.72",
+    "memory": "128",
+    "brand": "Realme",
+    "Keyword": [
+      "Realme",
+      "5G"
+    ]
+  },
+  {
+    "id": "40a",
+    "image": "images/1740159323155-iQOO Z9s Pro.jpg",
+    "name": "iQOO Z9s Pro",
+    "rating": {
+      "stars": 4.5,
+      "counts": 229
+    },
+    "price": 24999,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The iQOO Z9s Pro combines a 6.78-inch AMOLED display for vibrant and smooth visuals with a powerful camera system featuring a 64MP main sensor for detailed photography. It is powered by a substantial 5,000 mAh battery for extended use and fast charging. The phone is designed to deliver high performance and seamless connectivity for an enhanced user experience.",
+    "os": "iQOO UI",
+    "screen_size": "6.78",
+    "memory": "256",
+    "brand": "IQOO",
+    "Keyword": [
+      "iqoo",
+      "4G"
+    ]
+  },
+  {
+    "id": "41a",
+    "image": "images/1740159394341-iQOO Z9x 5G.jpg",
+    "name": "iQOO Z9x 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 2959
+    },
+    "price": 14498,
+    "camera": "64",
+    "battery": "5000",
+    "description": "The iQOO Z9x 5G features a 6.67-inch AMOLED display, offering vibrant and fluid visuals. It is equipped with a 64MP main camera for high-quality photography and a 5,000 mAh battery that ensures all-day use. The device supports 5G connectivity for fast and reliable internet speeds, making it a solid choice for both performance and connectivity.",
+    "os": "iQOO UI",
+    "screen_size": "6.67",
+    "memory": "128",
+    "brand": "IQOO",
+    "Keyword": [
+      "iqoo",
+      "5G"
+    ]
+  },
+  {
+    "id": "42a",
+    "image": "images/1740159618770-Nothing Phone 2a 5G.jpg",
+    "name": "Nothing Phone 2a 5G",
+    "rating": {
+      "stars": 4,
+      "counts": 585
+    },
+    "price": 25890,
+    "camera": "50",
+    "battery": "4700",
+    "description": "The Nothing Phone 2a 5G features a distinctive design with a transparent back and customizable LED notifications. It boasts a 6.55-inch AMOLED display for vivid visuals and a 50MP dual-camera system for versatile photography. Equipped with a 4,700 mAh battery, it supports all-day use and fast charging. The phone also offers 5G connectivity for fast and reliable internet access.",
+    "os": "Nothing OS",
+    "screen_size": "6.55",
+    "memory": "256",
+    "brand": "Nothing",
+    "Keyword": [
+      "Nothing",
+      "5G"
+    ]
+  },
+  {
+    "id": "43a",
+    "image": "images/1740159835813-Apple iPhone 15.jpg",
+    "name": "Apple iPhone 15",
+    "rating": {
+      "stars": 4.5,
+      "counts": 2177
+    },
+    "price": 69900,
+    "camera": "48",
+    "battery": "3349",
+    "description": "The iPhone 15 combines sleek design with advanced technology, featuring a 6.1-inch Super Retina XDR display and a powerful A16 Bionic chip. Its dual-camera system, with a 48MP main sensor and 12MP ultra-wide lens, delivers high-quality photos and videos. The phone supports USB-C for faster charging and data transfer, and offers improved battery life with its 3,349 mAh capacity.",
+    "os": "iOS",
+    "screen_size": "6.1",
+    "memory": "128",
+    "brand": "Apple",
+    "Keyword": [
+      "Apple",
+      "4G"
+    ]
+  },
+  {
+    "id": "44a",
+    "image": "images/1740159934828-Samsung Galaxy Z Fold6 5G AI.jpg",
+    "name": "Samsung Galaxy Z Fold 6 5G AI",
+    "rating": {
+      "stars": 4.5,
+      "counts": 53
+    },
+    "price": 176999,
+    "camera": "50",
+    "battery": "4400",
+    "description": "The Samsung Galaxy Z Fold 6 5G combines innovative design with advanced technology, featuring a 7.6-inch main foldable AMOLED display for an expansive and immersive experience. It includes a versatile camera system with multiple lenses for high-quality photos and videos. The device is powered by a robust battery that supports long usage and fast charging. With 5G connectivity, it ensures rapid and reliable internet speeds for seamless performance.",
+    "os": "One UI",
+    "screen_size": "7.6",
+    "memory": "512",
+    "brand": "Samsung",
+    "Keyword": [
+      "Samsung",
+      "5G"
+    ]
+  },
+  {
+    "id": "45a",
+    "image": "images/1740161066514-OnePlus Nord CE4.jpg",
+    "name": "OnePlus Nord CE4",
+    "rating": {
+      "stars": 4,
+      "counts": 4499
+    },
+    "price": 24999,
+    "camera": "50",
+    "battery": "5500",
+    "description": "The OnePlus Nord CE4 combines sleek design with solid performance, featuring a 6.7-inch AMOLED display for vibrant visuals. It boasts a versatile camera system with a high-resolution main sensor for detailed photos. The device is powered by a reliable battery, ensuring all-day usage, and supports fast charging for quick power-ups. With 5G connectivity, it offers fast and stable internet speeds.",
+    "os": "OxygenOS",
+    "screen_size": "6.7",
+    "memory": "256",
+    "brand": "OnePlus",
+    "Keyword": [
+      "OnePlus",
+      "4G"
+    ]
+  },
+  {
+    "id": "46a",
+    "image": "images/1740161152396-Xiaomi 14.jpg",
+    "name": "Xiaomi 14",
+    "rating": {
+      "stars": 4,
+      "counts": 228
+    },
+    "price": 69999,
+    "camera": "50",
+    "battery": "4600",
+    "description": "The Xiaomi 14 features a sleek design with a 6.36-inch AMOLED display, offering vibrant colors and sharp details. It is powered by the latest Snapdragon processor, ensuring high performance and efficiency. The camera system includes a 50MP main sensor for exceptional photo quality, while the 4,600 mAh battery provides reliable all-day usage. The device also supports fast charging and 5G connectivity for enhanced speed and performance.",
+    "os": "MIUI",
+    "screen_size": "6.36",
+    "memory": "256",
+    "brand": "Xiaomi",
+    "Keyword": [
+      "Xiaomi",
+      "4G"
+    ]
+  },
+  {
+    "id": "47a",
+    "image": "images/1740372276998-RedmiNote13Pro.jpg",
+    "name": "Redmi Note 13 Pro",
+    "rating": {
+      "stars": 4,
+      "counts": 995
+    },
+    "price": 24999,
+    "camera": "200",
+    "battery": "5100",
+    "description": "The Redmi Note 13 Pro offers a 6.67-inch AMOLED display with vibrant colours and smooth performance. It features a powerful 200MP main camera for stunning photography and detailed shots. The device is powered by a Snapdragon 7 series processor and houses a 5,100 mAh battery, ensuring long-lasting performance with fast charging support. Its 5G connectivity provides seamless and fast internet speeds.",
+    "os": "MIUI",
+    "screen_size": "6.67",
+    "memory": "256",
+    "brand": "Redmi",
+    "Keyword": [
+      "Redmi",
+      "4G"
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mobile Page</title>
+        <link rel="stylesheet" href="Assets/productDetail.css">
+        <link rel="stylesheet" href="Assets/Header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+      <header class="amazon-header">
+        <div class="header-left-section">
+          <a href="Homepage.html" class="header-link">
+            <img class="shop-logo"
+              src="images/Vijay Mobiles Logo.png">
+          </a>
+        </div>
+  
+        <div class="header-middle-section">
+          <input class="search-bar" type="text" placeholder="Search">
+  
+          <button class="search-button">
+            <img class="search-icon" src="images/icons/search-icon.png">
+          </button>
+        </div>
+  
+        <div class="header-right-section">
+          <a class="orders-link header-link" href="orders.html">
+            <span class="returns-text">Returns</span>
+            <span class="orders-text">& Orders</span>
+          </a>
+  
+          <a class="cart-link header-link" href="checkout.html">
+            <img class="cart-icon" src="images/icons/cart-icon.png">
+            <div class="cart-quantity js-cart-quantity"></div>
+            <div class="cart-text">Cart</div>
+          </a>
+        </div>
+      </header>
+        
+      <div class="product-container"></div>
+
+      <script type="module" src="javaScript/productDetail.js"></script>
+
+    </body>
+
+</html>
