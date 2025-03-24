@@ -30,7 +30,7 @@
 - Stripe
 
 ### PDF Invoice Generation:
-- EasyInvoice
+- pdf-lib
 
 ## Installation
 ### Prerequisites
