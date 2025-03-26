@@ -56,6 +56,6 @@
 
 ## Contact
 For any issues or suggestions, feel free to reach out:
-- **Email**: prasadnayak1104@gmail.com & omkhanvilkar17@gmail.com
+- **Email**: nayakprasad004@gmail.com & omkhanvilkar17@gmail.com
 - **GitHub**: https://github.com/PrasadNayak01 & https://github.com/OmKhanvilkar
 
