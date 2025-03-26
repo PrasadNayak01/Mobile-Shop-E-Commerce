@@ -583,7 +583,7 @@ app.get("/customers", (req, res) => {
 
 require("dotenv").config();
 const stripe = require("stripe")(
-  "sk_test_51Qdy45SFf75HEAEOQW02mvdokS4PgL72fhNqyy2qCmA5TUecE2lddo1PEWQVc2oIgvBq6zd7ENDcbBeCv8jJFQXc00FiInrKru"
+  ""
 );
 
 app.get("/complete", (req, res) => {
