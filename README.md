@@ -20,7 +20,7 @@
 
 ## Screenshots
 ### Homepage
-![Homepage Screenshot](assets/Homepage.png)
+![Homepage Screenshot](Assets/Homepage.png)
 
 ## Technologies Used
 ### Frontend:
