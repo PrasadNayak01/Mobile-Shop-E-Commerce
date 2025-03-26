@@ -1,40 +1,53 @@
-# Mobile-Shop-E-Commerce
+# Mobile-Shop-E-Commerce  
 
-## Overview
-**Mobile Shop E-Commerce** is a full-stack web application designed for a mobile shop. It enables users to browse mobile products, add them to the cart, and complete secure payments using Stripe. The application also includes an invoice generation feature for purchases.
+## Overview  
+**Mobile Shop E-Commerce** is a full-stack web application designed for a mobile shop. It enables users to browse mobile products, add them to the cart, and complete secure payments using Stripe. The application also includes an invoice generation feature for purchases.  
 
-## Features
-### Customer Functionalities:
-- **User Authentication**: Secure login and registration system.
-- **Product Browsing**: View a wide range of mobile products with details.
-- **Shopping Cart**: Add, remove, and update cart items.
-- **Secure Payments**: Stripe integration for seamless transactions.
-- **Order History**: View past orders and invoices.
-- **Invoice Generation**: Download PDF invoices for completed purchases.
+## Features  
 
-### Admin Functionalities:
-- **Admin Authentication**: Secure login system for admin users.
-- **Product Management**: Add and delete mobile products.
-- **Order Management**: View and manage all customer orders.
-- **User Management**: Manage registered customers.
+### Customer Functionalities:  
+- **User Authentication**: Secure login and registration system.  
+- **Product Browsing**: View a wide range of mobile products with details.  
+- **Product Search & Filtering**:  
+  - **Search Bar**: Quickly find products by name or keyword.  
+  - **Brand Filter**: Filter products based on popular mobile brands.  
+  - **Price Filter**: Sort mobiles within a specific price range.  
+  - **Ratings Filter**: Choose mobiles based on customer ratings.  
+  - **Network Type Filter**: Filter by 4G, 5G, or other connectivity types.  
+- **Shopping Cart**: Add, remove, and update cart items.  
+- **Secure Payments**: Stripe integration for seamless transactions.  
+- **Order History**: View past orders and invoices.  
+- **Invoice Generation**: Download PDF invoices for completed purchases.  
 
-## Screenshots
-### Homepage
-![Homepage Screenshot](Assets/Homepage.png)
+### Admin Functionalities:  
+- **Admin Authentication**: Secure login system for admin users.  
+- **Product Management**: Add and delete mobile products.  
+- **Order Management**: View and manage all customer orders.  
+- **User Management**: Manage registered customers.  
 
-## Technologies Used
-### Frontend:
-- HTML, CSS, JavaScript
+## Screenshots  
+### Homepage  
+![Homepage Screenshot](Assets/Homepage.png)  
 
-### Backend:
-- Node.js, Express.js
-- MySQL (Database)
+## 🚀 Technologies Used  
 
-### Payment Gateway:
-- Stripe
+### Frontend:  
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)  
+![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)  
 
-### PDF Invoice Generation:
-- pdf-lib
+### Backend:  
+![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white)  
+![Express.js](https://img.shields.io/badge/Express.js-%23404D59.svg?style=for-the-badge&logo=express&logoColor=white)  
+
+### Database:  
+![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)  
+
+### Payment Gateway:  
+![Stripe](https://img.shields.io/badge/Stripe-%23646FDC.svg?style=for-the-badge&logo=stripe&logoColor=white)  
+
+### PDF Invoice Generation:  
+![pdf-lib](https://img.shields.io/badge/PDF--lib-%23FF5733.svg?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)  
 
 ## Installation
 ### Prerequisites
