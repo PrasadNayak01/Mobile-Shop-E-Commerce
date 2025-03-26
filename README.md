@@ -54,8 +54,7 @@
 3. View and process customer orders.
 4. Manage users.
 
-## Contact
-For any issues or suggestions, feel free to reach out:
-- **Email**: nayakprasad004@gmail.com & omkhanvilkar17@gmail.com
+## Contact  
+For any issues or suggestions, feel free to reach out:  
 - **GitHub**: https://github.com/PrasadNayak01 & https://github.com/OmKhanvilkar
-
+- **Project Partner**: Om Khanvilkar

@@ -516,8 +516,8 @@ app.get("/customers", (req, res) => {
 
 require("dotenv").config();
 const stripe = require("stripe")(
-  ""
-);
+  "<your_stripe_api_key>"
+); // https://stripe.com/in
 
 app.get("/complete", (req, res) => {
   const completePagePath = path.join(__dirname, "complete.html");
@@ -537,45 +537,6 @@ app.use(
     allowedHeaders: "Content-Type",
   })
 );
-
-// app.post("/checkout", async (req, res) => {
-//   try {
-//     const { cart, customer } = req.body;
-
-//     if (!Array.isArray(cart) || cart.length === 0) {
-//       return res.status(400).send("Invalid cart data");
-//     }
-
-//     let totalPrice = 0;
-//     cart.forEach(({ price, quantity, deliveryPrice }) => {
-//       totalPrice += price * quantity + (deliveryPrice || 0);
-//     });
-
-//     // Encode cart & customer data to pass in success URL
-//     const successUrl = `http://localhost:5001/complete`;
-
-//     const session = await stripe.checkout.sessions.create({
-//       payment_method_types: ["card"],
-//       line_items: cart.map((item) => ({
-//         price_data: {
-//           currency: "inr",
-//           product_data: { name: item.name },
-//           unit_amount: item.price * 100, // Convert to paise
-//         },
-//         quantity: item.quantity,
-//       })),
-//       mode: "payment",
-//       success_url: successUrl,
-//       cancel_url: `http://localhost:5001/cancel`,
-//       shipping_address_collection: { allowed_countries: ["IN"] },
-//     });
-
-//     res.json({ url: session.url });
-//   } catch (error) {
-//     console.error("Stripe Checkout Error:", error.message);
-//     res.status(500).send("Failed to create checkout session");
-//   }
-// });
 
 app.post("/checkout", async (req, res) => {
   try {
@@ -841,70 +802,6 @@ app.post("/addProduct", (req, res) => {
     });
   });
 });
-
-// Define the path to orders.json
-// const ordersFilePath = path.join(__dirname, 'orders.json');
-
-// // Read and parse orders.json
-// let ordersData = [];
-// try {
-//     const data = fs.readFileSync(ordersFilePath, 'utf8');
-//     ordersData = JSON.parse(data);
-// } catch (error) {
-//     console.error('Error reading orders.json:', error);
-// }
-
-// // Payment array
-// const payment = [];
-
-// // Store the orders.json data in payment array
-// payment.push(...ordersData);
-// console.log(payment);
-
-// module.exports = { payment };
-
-// app.use('/auth', authRoutes);
-// const router = express.Router();
-
-// // Load orders.json
-// const ordersFilePath = path.join(__dirname, 'orders.json');
-// let ordersData = [];
-
-// try {
-//     const data = fs.readFileSync(ordersFilePath, 'utf8');
-//     ordersData = JSON.parse(data);
-// } catch (error) {
-//     console.error('Error reading orders.json:', error);
-// }
-
-// // Create an API route to return payments
-// router.get('/payments', (req, res) => {
-//     res.json(ordersData);
-// });
-
-// module.exports = router;
-
-//Products,json to ProductsData
-// const paymentsFilePath = path.join(__dirname,  "..", "Register-Login", "orders.json");
-
-// app.post('/addPayments', (req, res) => {
-//     const newPayment = req.body;
-
-//     fs.readFile(paymentsFilePath, 'utf8', (err, data) => {
-//         if (err) {
-//             return res.status(500).json({ error: 'Error reading payment file' });
-//         }
-//         let payments = JSON.parse(data);
-//         payments.push(newPayment);
-
-//         fs.writeFile(paymentsFilePath , JSON.stringify(payments, null, 2), (err) => {
-//             if (err) {
-//                 return res.status(500).json({ error: 'Error saving payments' });
-//             }
-//             res.json({ message: 'Payment added successfully' });
-//         });
-//     });
-// });
 
 const paymentsFilePath = path.join(
   __dirname,
