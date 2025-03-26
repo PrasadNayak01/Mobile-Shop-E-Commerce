@@ -57,4 +57,4 @@
 ## Contact  
 For any issues or suggestions, feel free to reach out:  
 - **GitHub**: [Prasad Nayak](https://github.com/PrasadNayak01) & [Om Khanvilkar](https://github.com/OmKhanvilkar)
-- **Project Partner**: Om Khanvilkar
+- **Project Partner**: [Om Khanvilkar](https://github.com/OmKhanvilkar)
